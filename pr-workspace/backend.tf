@@ -4,7 +4,7 @@ terraform {
     organization = "matthoyle-xealth"
 
     workspaces {
-      name = "test"
+      name = "pr-workspace"
     }
   }
 }

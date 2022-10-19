@@ -3,7 +3,7 @@
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
-  default     = "tfcloud-demo-vpc"
+  default     = "tfcloud-demo-vpc-dev"
 }
 
 variable "vpc_cidr" {
