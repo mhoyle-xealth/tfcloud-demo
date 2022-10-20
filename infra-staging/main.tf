@@ -25,7 +25,7 @@ module "ec2_instances" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "2.12.0"
 
-  name           = "my-ec2-cluster-dev"
+  name           = "my-ec2-cluster-staging"
   instance_count = 2
 
   ami                    = "ami-096c933c984d914d1"
@@ -35,17 +35,17 @@ module "ec2_instances" {
 
   tags = {
     Terraform   = "true"
-    Environment = "dev"
+    Environment = "staging"
   }
 }
 
 module "website_s3_bucket" {
   source = "./modules/aws-s3-static-website-bucket"
 
-  bucket_name = "tfdemo-test-dev"
+  bucket_name = "tfdemo-test-staging"
 
   tags = {
     Terraform   = "true"
-    Environment = "dev"
+    Environment = "staging"
   }
 }
