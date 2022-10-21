@@ -1,7 +1,7 @@
 # Terraform configuration
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = var.bucket_name
+  bucket = "new_bucket_name"
 
   tags = var.tags
 }
