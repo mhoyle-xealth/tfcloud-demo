@@ -26,7 +26,7 @@ module "ec2_instances" {
   version = "2.12.0"
 
   name           = "my-ec2-cluster-dev"
-  instance_count = 2
+  instance_count = 3
 
   ami                    = "ami-0d7a59bc717a91d73"
   instance_type          = "t2.micro"
