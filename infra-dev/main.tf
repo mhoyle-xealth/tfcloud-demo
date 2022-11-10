@@ -41,7 +41,7 @@ module "ec2_instances" {
 
 module "website_s3_bucket" {
   source  = "spacelift.io/xealth/aws-s3-static-website-bucket/aws"
-  version = "0.1.0"
+  version = ">= 0.1.0, < 0.2.0"
 
   bucket_name = "tfdemo-test-dev"
 
