@@ -50,3 +50,14 @@ module "website_s3_bucket" {
     Environment = "dev"
   }
 }
+
+module "website_s3_bucket_internal_module" {
+  source  = "../modules/aws-s3-static-website-bucket"
+
+  bucket_name = "tfdemo-test-dev-internal"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
