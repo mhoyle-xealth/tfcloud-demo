@@ -5,6 +5,13 @@ provider "aws" {
   region  = "us-east-1"
 }
 
+provider "aws" {
+  assume_role {
+    role_arn     = "arn:aws:iam::880603951957:role/spacelift-admin"
+    session_name = "spacelift"
+  }
+}
+
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "2.21.0"
