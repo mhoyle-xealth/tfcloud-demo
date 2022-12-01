@@ -6,7 +6,7 @@ provider "aws" {
 
   assume_role {
     role_arn     = "arn:aws:iam::880603951957:role/spacelift-admin"
-    session_name = var.spacelift_run_id
+    session_name = "spacelift"
   }
 }
 
