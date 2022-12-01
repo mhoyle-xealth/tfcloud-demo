@@ -3,11 +3,6 @@
 provider "aws" {
   version = "~> 4.0"
   region  = "us-east-1"
-
-  assume_role {
-    role_arn     = "arn:aws:iam::880603951957:role/spacelift-admin"
-    session_name = "spacelift"
-  }
 }
 
 module "vpc" {
